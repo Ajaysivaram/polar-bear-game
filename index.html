@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polar Bear Coloring Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay loop muted playsinline id="video-background">
+        <source src="./video/5485144-hd_1920_1080_25fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <h1>🐻❄️ COLOUR THE POLAR BEARS! 🎨</h1>
+
+    <p class="rules">
+        🟧 Orange → On a snowball <br>
+        🌸 Pink → Below a cloud <br>
+        🌟 Yellow → Between two snowballs <br>
+        🌿 Green → Inside a snowball <br>
+    </p>
+
+    <div class="game-board">
+        <img src="images/image1.png" class="bear" data-condition="yellow" alt="bear1">
+        <img src="images/image2.png" class="bear" data-condition="green" alt="bear2">
+        <img src="images/image3.png" class="bear" data-condition="orange" alt="bear3">
+        <img src="images/image4.png" class="bear" data-condition="orange" alt="bear4">
+        <img src="images/image5.png" class="bear" data-condition="pink" alt="bear5">
+        <img src="images/image6.png" class="bear" data-condition="orange" alt="bear6">
+        <img src="images/image7.png" class="bear" data-condition="orange" alt="bear7">
+        <img src="images/image8.png" class="bear" data-condition="pink" alt="bear8"> 
+        <img src="images/image9.png" class="bear" data-condition="yellow" alt="bear9">
+    </div>
+
+    <div class="controls">
+        <label for="color">🎨 Pick a colour:</label>
+        <select id="color">
+            <option value="orange">🟧 Orange</option>
+            <option value="pink">🌸 Pink</option>
+            <option value="yellow">🌟 Yellow</option>
+            <option value="green">🌿 Green</option>
+            <option value="red">❌ Red</option>
+        </select>
+        <button id="resetBtn">🔄 Reset</button>
+    </div>
+
+    <p id="message"></p>
+
+    <audio id="successSound" src="audio/success-340660.mp3" preload="auto"></audio>
+    <audio id="errorSound" src="audio/error-126627.mp3" preload="auto"></audio>
+
+    <canvas id="confettiCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
